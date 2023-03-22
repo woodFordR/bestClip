@@ -42,7 +42,7 @@ Devise.setup do |config|
   # config.unlock_in = 1.hour
   # config.last_attempt_warning = true
   # config.reset_password_keys = [:email]
-  config.reset_password_within = 6.hours
+  config.reset_password_within = 10.minutes
   # config.sign_in_after_reset_password = true
   # config.encryptor = :sha512
   # config.scoped_views = false
