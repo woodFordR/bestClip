@@ -1,24 +1,14 @@
-# README
+# bestClip ~ An incredible rails app for collecting the best photo of the day from each user.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### initial gem awareness
+* `ruby version 3.2.1`
+* `rails version 7.0.4`
 
-Things you may want to cover:
+## postgres local execution
+* ```
+  sudo apt install postgresql postgresql-contrib
+  sudo -u postgres psql
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  CREATE USER <username> WITH ENCRYPTED PASSWORD '<password>';
+  ALTER ROLE <username> SUPERUSER CREATEDB CREATEROLE;
+```

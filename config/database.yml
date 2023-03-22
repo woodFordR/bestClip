@@ -1,6 +1,6 @@
 default: &default
   adapter: postgresql
-  password: woody
+  password: <%= ENV["DEV_DB"] %>
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
@@ -22,4 +22,4 @@ production:
   <<: *default
   database: bestclip_production
   username: bestclip
-  password: <%= ENV["BESTCLIP_DATABASE_PASSWORD"] %>
+  password: <%= ENV["PROD_DB"] %>
