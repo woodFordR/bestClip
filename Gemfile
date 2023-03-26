@@ -7,7 +7,7 @@ gem "bootsnap", require: false
 gem "devise"
 gem "importmap-rails"
 gem "jbuilder"
-gem "omniauth-github"
+gem "omniauth-google-oauth2"
 gem "omniauth-rails_csrf_protection"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"

@@ -5,7 +5,7 @@ Devise.setup do |config|
   config.omniauth :google_oauth2, 
     Rails.application.credentials.dig(:google, :google_client_id),
     Rails.application.credentials.dig(:google, :google_client_secret),
-      scope:'userinfo.email,userinfo.profile'
+      scope: 'userinfo.email,userinfo.profile'
   # config.secret_key = '22f828bd3eed12092cbdff27f4b2590fc1b9f4c6f6014956480c4655bfa52fa1ade7a1f5151a7c0fc5221eac1aa3de9c762a215850651dc6c7b6e89269d12e5c'
   # config.parent_controller = 'DeviseController'
   config.mailer_sender = 'adam@example.com'
