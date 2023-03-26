@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |bestClip| "https://github.com/#{bestClip}.git" }
 
 ruby "3.2.1"
 
@@ -7,6 +7,8 @@ gem "bootsnap", require: false
 gem "devise"
 gem "importmap-rails"
 gem "jbuilder"
+gem "omniauth-github"
+gem "omniauth-rails_csrf_protection"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
