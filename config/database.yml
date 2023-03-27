@@ -1,6 +1,6 @@
 default: &default
   adapter: postgresql
-  password: <%= ENV["DEV_DB"] %>
+  password: <%= Rails.application.credentials.dig(:database, :development) %>
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
@@ -22,4 +22,4 @@ production:
   <<: *default
   database: bestclip_production
   username: bestclip
-  password: <%= ENV["PROD_DB"] %>
+  password: <%= Rails.application.credentials.dig(:database, :production) %>
