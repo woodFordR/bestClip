@@ -1,0 +1,10 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'db/migrate/*.rb'
+    - 'db/schema.rb'
+    - 'bin/*'
+
+Metrics/AbcSize:
+  Max: 21

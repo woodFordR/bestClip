@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 Devise.setup do |config|
-
-  config.omniauth :google_oauth2, 
-    Rails.application.credentials.dig(:google, :google_client_id),
-    Rails.application.credentials.dig(:google, :google_client_secret),
-      scope: 'userinfo.email,userinfo.profile'
-  # config.secret_key = '22f828bd3eed12092cbdff27f4b2590fc1b9f4c6f6014956480c4655bfa52fa1ade7a1f5151a7c0fc5221eac1aa3de9c762a215850651dc6c7b6e89269d12e5c'
+  config.omniauth :google_oauth2,
+                  Rails.application.credentials.dig(:google, :google_client_id),
+                  Rails.application.credentials.dig(:google, :google_client_secret),
+                  scope: 'userinfo.email,userinfo.profile'
+  # config.secret_key = '22f828bd3eed12092cbdff27f4b2590fc1b9f4c6f6014956480' \
+  #   `c4655bfa52fa1ade7a1f5151a7c0fc5221eac1aa3de9c762a215850651dc6c7b6e89269d12e5c'
   # config.parent_controller = 'DeviseController'
   config.mailer_sender = 'adam@example.com'
   # config.mailer = 'Devise::Mailer'
@@ -26,7 +26,8 @@ Devise.setup do |config|
   # config.clean_up_csrf_token_on_authentication = true
   # config.reload_routes = true
   config.stretches = Rails.env.test? ? 1 : 12
-  # config.pepper = 'a09ac68ebe17e2406830f7443736da8f076c049532caaaae8461e6acd4ff736fcca23b2ebd069f53c4aa600563504e5077bcc657792c788bc90a5c2aba87b05a'
+  # config.pepper = 'a09ac68ebe17e2406830f7443736da8f076c049532caaaae8461e6a' /
+  #   'cd4ff736fcca23b2ebd069f53c4aa600563504e5077bcc657792c788bc90a5c2aba87b05a'
   # config.send_email_changed_notification = false
   # config.send_password_change_notification = false
   # config.allow_unconfirmed_access_for = 2.days
