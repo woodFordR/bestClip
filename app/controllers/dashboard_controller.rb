@@ -5,7 +5,9 @@ class DashboardController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @capybara = 'cappy cappy barrraaaa'
+    unless User.uploaded_daily_photo?(current_user.id)
+      render 'dashboard/upload_photo'
+    end
   end
 
   def about
