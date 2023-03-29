@@ -3,7 +3,10 @@
     <p class="border-slate-600 py-2 px-2">
       Welcome <%= current_user.email %>, You have uploaded a photo.
     </p>
+    <hr />
+    <br />
     <p class="border-amber-400 py-4 px-4">
-      The <%= @capybara %> is a funny animal. Here is your image.
+      The <%= @photo.name %> image is an awesome picture.
     </p>
+    <%= image_tag @photo.image.variant(resize_to_limit: [300, nil]) %>
 </div>

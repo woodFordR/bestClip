@@ -6,8 +6,11 @@ class DashboardController < ApplicationController
 
   def index
     unless User.uploaded_daily_photo?(current_user.id)
-      render 'dashboard/upload_photo'
+      render 'photos/upload'
     end
+
+    current_date = DateTime.current
+    @photo = current_user.photos.find_by(upload_date: current_date)
   end
 
   def about

@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="text-center"><%= "Today's Image" %></h1>
+  <h2 class="border-slate-600 py-2 px-2">
+    <%= "#{current_user.email.capitalize}, upload your photo for today." %>
+  </h2>
+  <%= form_with model: @photo do |f| %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.button "submit" %>
+  <% end %>
+</div>

@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <%= render "bars/nav" %>
+  <%= render "navigation/top" %>
   <body>
     <% if flash[:notice] %>
       <p class="notice"><%= flash[:notice] %></p>
@@ -21,6 +21,6 @@
     
     <%= yield %>
   </body>
-  <%= render "bars/footer" %>
+  <%= render "navigation/footer" %>
 
 </html>

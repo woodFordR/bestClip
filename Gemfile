@@ -5,6 +5,7 @@ git_source(:github) { 'https://github.com/woodFordr/bestClip.git' }
 
 ruby '3.2.1'
 
+gem 'aws-sdk-s3', require: false
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'image_processing', '~> 1.2'
